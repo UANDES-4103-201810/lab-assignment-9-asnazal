@@ -1,0 +1,16 @@
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:fisrt_name, "First name:") %>
+  <%= text_field_tag("fisrt_name") %>
+  <%= label_tag(:name, "name:") %>
+  <%= text_field_tag("namde") %>
+  <%= label_tag(:birth_date, "Birth date:") %>
+  <%= text_field_tag("birth_date") %>
+  <%= label_tag(:description, "Description:") %>
+  <%= text_field_tag("description") %>
+<div></div>
+  <input type="radio" name="rol" value="actor"> actor<br>
+  <input type="radio" name="rol" value="director"> director<br>
+
+
+  <%= submit_tag("Create") %>
+<% end %>

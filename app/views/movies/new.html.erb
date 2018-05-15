@@ -1,0 +1,22 @@
+<h1>New Movie</h1>
+
+
+<%= form_for @movie, method: 'POST' do |xx| %>
+  <label for="cost1">Movie title</label>
+  <div> <%= xx.text_field :title  %></div>
+  <label for="cost1">Movie description</label>
+  <div> <%= xx.text_field :description  %></div>
+
+  <label for="cost1">Movie duration</label>
+  <div> <%= xx.text_field :duration  %></div>
+
+  <label for="cost1">movie release date</label>
+  <div> <%= xx.text_field :release_date  %></div>
+
+  <a class="btn btn-primary m-1"  role="button"><%= xx.submit  %></a>
+
+
+<% end %>
+
+
+<%= link_to 'Back', movies_path %>
