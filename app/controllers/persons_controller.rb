@@ -8,7 +8,7 @@ class PersonsController < ApplicationController
   end
 
   def create
-    rol = params[:type]
+    rol = params[:rol]
     if rol == 'actor'
       @actor = Actor.new(first_name: params[:first_name], name: params[:name], birth_date: params[:birth_date], description: params[:description])
       respond_to do |format|
