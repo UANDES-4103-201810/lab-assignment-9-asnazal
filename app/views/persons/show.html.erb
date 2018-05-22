@@ -1,0 +1,42 @@
+<tr>
+  <th>Name</th>
+  <th>Lastname</th>
+  <th>Type</th>
+
+</tr>
+</thead>
+<tbody>
+<% @actors.each do |x| %>
+
+  <tr>
+    <td> Actor</td>
+    <td> <%=x.first_name%></td>
+
+    <td> <%=x.name%></td>
+
+
+
+
+
+    <td> <%= link_to 'Show','/actors/' + x.id.to_s %></td>
+
+    <td><%= link_to 'Destroy', x, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end%>
+
+<% @directors.each do |x| %>
+
+  <tr>
+    <td> Director</td>
+    <td> <%=x.first_name%></td>
+
+    <td> <%=x.name%></td>
+
+
+
+
+    <td> <%= link_to 'Show','/directors/' + x.id.to_s %></td>
+
+    <td><%= link_to 'Destroy', x, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end%>
